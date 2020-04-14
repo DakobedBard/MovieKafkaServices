@@ -3,12 +3,13 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
+package com.mddarr.avromoviekafka;  
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class User extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"fields\":[{\"name\":\"name\",\"type\":\"string\",\"avro.java.string\":\"String\"},{\"name\":\"age\",\"type\":\"int\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"com.mddarr.avromoviekafka\",\"fields\":[{\"name\":\"name\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"avro.java.string\":\"String\"},{\"name\":\"age\",\"type\":\"int\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
-  @Deprecated public java.lang.CharSequence name;
+  @Deprecated public java.lang.String name;
   @Deprecated public int age;
 
   /**
@@ -21,7 +22,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   /**
    * All-args constructor.
    */
-  public User(java.lang.CharSequence name, java.lang.Integer age) {
+  public User(java.lang.String name, java.lang.Integer age) {
     this.name = name;
     this.age = age;
   }
@@ -39,7 +40,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: name = (java.lang.CharSequence)value$; break;
+    case 0: name = (java.lang.String)value$; break;
     case 1: age = (java.lang.Integer)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
@@ -48,7 +49,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   /**
    * Gets the value of the 'name' field.
    */
-  public java.lang.CharSequence getName() {
+  public java.lang.String getName() {
     return name;
   }
 
@@ -56,7 +57,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Sets the value of the 'name' field.
    * @param value the value to set.
    */
-  public void setName(java.lang.CharSequence value) {
+  public void setName(java.lang.String value) {
     this.name = value;
   }
 
@@ -76,18 +77,18 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   }
 
   /** Creates a new User RecordBuilder */
-  public static User.Builder newBuilder() {
-    return new User.Builder();
+  public static com.mddarr.avromoviekafka.User.Builder newBuilder() {
+    return new com.mddarr.avromoviekafka.User.Builder();
   }
   
   /** Creates a new User RecordBuilder by copying an existing Builder */
-  public static User.Builder newBuilder(User.Builder other) {
-    return new User.Builder(other);
+  public static com.mddarr.avromoviekafka.User.Builder newBuilder(com.mddarr.avromoviekafka.User.Builder other) {
+    return new com.mddarr.avromoviekafka.User.Builder(other);
   }
   
   /** Creates a new User RecordBuilder by copying an existing User instance */
-  public static User.Builder newBuilder(User other) {
-    return new User.Builder(other);
+  public static com.mddarr.avromoviekafka.User.Builder newBuilder(com.mddarr.avromoviekafka.User other) {
+    return new com.mddarr.avromoviekafka.User.Builder(other);
   }
   
   /**
@@ -96,16 +97,16 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<User>
     implements org.apache.avro.data.RecordBuilder<User> {
 
-    private java.lang.CharSequence name;
+    private java.lang.String name;
     private int age;
 
     /** Creates a new Builder */
     private Builder() {
-      super(User.SCHEMA$);
+      super(com.mddarr.avromoviekafka.User.SCHEMA$);
     }
     
     /** Creates a Builder by copying an existing Builder */
-    private Builder(User.Builder other) {
+    private Builder(com.mddarr.avromoviekafka.User.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
@@ -118,8 +119,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Creates a Builder by copying an existing User instance */
-    private Builder(User other) {
-            super(User.SCHEMA$);
+    private Builder(com.mddarr.avromoviekafka.User other) {
+            super(com.mddarr.avromoviekafka.User.SCHEMA$);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
         fieldSetFlags()[0] = true;
@@ -131,12 +132,12 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
 
     /** Gets the value of the 'name' field */
-    public java.lang.CharSequence getName() {
+    public java.lang.String getName() {
       return name;
     }
     
     /** Sets the value of the 'name' field */
-    public User.Builder setName(java.lang.CharSequence value) {
+    public com.mddarr.avromoviekafka.User.Builder setName(java.lang.String value) {
       validate(fields()[0], value);
       this.name = value;
       fieldSetFlags()[0] = true;
@@ -149,7 +150,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Clears the value of the 'name' field */
-    public User.Builder clearName() {
+    public com.mddarr.avromoviekafka.User.Builder clearName() {
       name = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -161,7 +162,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Sets the value of the 'age' field */
-    public User.Builder setAge(int value) {
+    public com.mddarr.avromoviekafka.User.Builder setAge(int value) {
       validate(fields()[1], value);
       this.age = value;
       fieldSetFlags()[1] = true;
@@ -174,7 +175,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Clears the value of the 'age' field */
-    public User.Builder clearAge() {
+    public com.mddarr.avromoviekafka.User.Builder clearAge() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -183,7 +184,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     public User build() {
       try {
         User record = new User();
-        record.name = fieldSetFlags()[0] ? this.name : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.name = fieldSetFlags()[0] ? this.name : (java.lang.String) defaultValue(fields()[0]);
         record.age = fieldSetFlags()[1] ? this.age : (java.lang.Integer) defaultValue(fields()[1]);
         return record;
       } catch (Exception e) {

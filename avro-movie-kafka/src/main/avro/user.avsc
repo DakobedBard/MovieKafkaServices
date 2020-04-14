@@ -1,6 +1,6 @@
 {
  "type": "record",
- "name": "User",
+ "name": "com.mddarr.avromoviekafka.User",
  "fields": [
     { "name": "name","type": "string", "avro.java.string": "String" },
     { "name": "age", "type": "int" }

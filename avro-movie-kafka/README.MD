@@ -1,0 +1,3 @@
+kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic user
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic user --from-beginning
