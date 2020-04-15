@@ -3,12 +3,12 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
-package com.mddarr.avromoviekafka.model.events.Event2;  
+package com.mddarr.avromoviekafka.model.events;  
 @SuppressWarnings("all")
 /** Schema for hr.ivlahek.showcase.event.dto.Event2 */
 @org.apache.avro.specific.AvroGenerated
 public class Event2 extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Event2\",\"namespace\":\"com.mddarr.avromoviekafka.model.events.Event2\",\"doc\":\"Schema for hr.ivlahek.showcase.event.dto.Event2\",\"fields\":[{\"name\":\"hits\",\"type\":\"int\"},{\"name\":\"timestamp\",\"type\":\"long\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Event2\",\"namespace\":\"com.mddarr.avromoviekafka.model.events\",\"doc\":\"Schema for hr.ivlahek.showcase.event.dto.Event2\",\"fields\":[{\"name\":\"hits\",\"type\":\"int\"},{\"name\":\"timestamp\",\"type\":\"long\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public int hits;
   @Deprecated public long timestamp;
@@ -78,18 +78,18 @@ public class Event2 extends org.apache.avro.specific.SpecificRecordBase implemen
   }
 
   /** Creates a new Event2 RecordBuilder */
-  public static com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder newBuilder() {
-    return new com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder();
+  public static com.mddarr.avromoviekafka.model.events.Event2.Builder newBuilder() {
+    return new com.mddarr.avromoviekafka.model.events.Event2.Builder();
   }
   
   /** Creates a new Event2 RecordBuilder by copying an existing Builder */
-  public static com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder newBuilder(com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder other) {
-    return new com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder(other);
+  public static com.mddarr.avromoviekafka.model.events.Event2.Builder newBuilder(com.mddarr.avromoviekafka.model.events.Event2.Builder other) {
+    return new com.mddarr.avromoviekafka.model.events.Event2.Builder(other);
   }
   
   /** Creates a new Event2 RecordBuilder by copying an existing Event2 instance */
-  public static com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder newBuilder(com.mddarr.avromoviekafka.model.events.Event2.Event2 other) {
-    return new com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder(other);
+  public static com.mddarr.avromoviekafka.model.events.Event2.Builder newBuilder(com.mddarr.avromoviekafka.model.events.Event2 other) {
+    return new com.mddarr.avromoviekafka.model.events.Event2.Builder(other);
   }
   
   /**
@@ -103,11 +103,11 @@ public class Event2 extends org.apache.avro.specific.SpecificRecordBase implemen
 
     /** Creates a new Builder */
     private Builder() {
-      super(com.mddarr.avromoviekafka.model.events.Event2.Event2.SCHEMA$);
+      super(com.mddarr.avromoviekafka.model.events.Event2.SCHEMA$);
     }
     
     /** Creates a Builder by copying an existing Builder */
-    private Builder(com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder other) {
+    private Builder(com.mddarr.avromoviekafka.model.events.Event2.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.hits)) {
         this.hits = data().deepCopy(fields()[0].schema(), other.hits);
@@ -120,8 +120,8 @@ public class Event2 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Creates a Builder by copying an existing Event2 instance */
-    private Builder(com.mddarr.avromoviekafka.model.events.Event2.Event2 other) {
-            super(com.mddarr.avromoviekafka.model.events.Event2.Event2.SCHEMA$);
+    private Builder(com.mddarr.avromoviekafka.model.events.Event2 other) {
+            super(com.mddarr.avromoviekafka.model.events.Event2.SCHEMA$);
       if (isValidValue(fields()[0], other.hits)) {
         this.hits = data().deepCopy(fields()[0].schema(), other.hits);
         fieldSetFlags()[0] = true;
@@ -138,7 +138,7 @@ public class Event2 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Sets the value of the 'hits' field */
-    public com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder setHits(int value) {
+    public com.mddarr.avromoviekafka.model.events.Event2.Builder setHits(int value) {
       validate(fields()[0], value);
       this.hits = value;
       fieldSetFlags()[0] = true;
@@ -151,7 +151,7 @@ public class Event2 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Clears the value of the 'hits' field */
-    public com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder clearHits() {
+    public com.mddarr.avromoviekafka.model.events.Event2.Builder clearHits() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -162,7 +162,7 @@ public class Event2 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Sets the value of the 'timestamp' field */
-    public com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder setTimestamp(long value) {
+    public com.mddarr.avromoviekafka.model.events.Event2.Builder setTimestamp(long value) {
       validate(fields()[1], value);
       this.timestamp = value;
       fieldSetFlags()[1] = true;
@@ -175,7 +175,7 @@ public class Event2 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Clears the value of the 'timestamp' field */
-    public com.mddarr.avromoviekafka.model.events.Event2.Event2.Builder clearTimestamp() {
+    public com.mddarr.avromoviekafka.model.events.Event2.Builder clearTimestamp() {
       fieldSetFlags()[1] = false;
       return this;
     }

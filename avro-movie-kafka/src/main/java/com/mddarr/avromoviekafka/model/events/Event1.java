@@ -3,12 +3,12 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
-package com.mddarr.avromoviekafka.model.events.Event1;  
+package com.mddarr.avromoviekafka.model.events;  
 @SuppressWarnings("all")
 /** Schema for hr.ivlahek.showcase.event.dto.Event1 */
 @org.apache.avro.specific.AvroGenerated
 public class Event1 extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Event1\",\"namespace\":\"com.mddarr.avromoviekafka.model.events.Event1\",\"doc\":\"Schema for hr.ivlahek.showcase.event.dto.Event1\",\"fields\":[{\"name\":\"name\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Event1\",\"namespace\":\"com.mddarr.avromoviekafka.model.events\",\"doc\":\"Schema for hr.ivlahek.showcase.event.dto.Event1\",\"fields\":[{\"name\":\"name\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public java.lang.String name;
   @Deprecated public java.lang.String value;
@@ -78,18 +78,18 @@ public class Event1 extends org.apache.avro.specific.SpecificRecordBase implemen
   }
 
   /** Creates a new Event1 RecordBuilder */
-  public static com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder newBuilder() {
-    return new com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder();
+  public static com.mddarr.avromoviekafka.model.events.Event1.Builder newBuilder() {
+    return new com.mddarr.avromoviekafka.model.events.Event1.Builder();
   }
   
   /** Creates a new Event1 RecordBuilder by copying an existing Builder */
-  public static com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder newBuilder(com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder other) {
-    return new com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder(other);
+  public static com.mddarr.avromoviekafka.model.events.Event1.Builder newBuilder(com.mddarr.avromoviekafka.model.events.Event1.Builder other) {
+    return new com.mddarr.avromoviekafka.model.events.Event1.Builder(other);
   }
   
   /** Creates a new Event1 RecordBuilder by copying an existing Event1 instance */
-  public static com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder newBuilder(com.mddarr.avromoviekafka.model.events.Event1.Event1 other) {
-    return new com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder(other);
+  public static com.mddarr.avromoviekafka.model.events.Event1.Builder newBuilder(com.mddarr.avromoviekafka.model.events.Event1 other) {
+    return new com.mddarr.avromoviekafka.model.events.Event1.Builder(other);
   }
   
   /**
@@ -103,11 +103,11 @@ public class Event1 extends org.apache.avro.specific.SpecificRecordBase implemen
 
     /** Creates a new Builder */
     private Builder() {
-      super(com.mddarr.avromoviekafka.model.events.Event1.Event1.SCHEMA$);
+      super(com.mddarr.avromoviekafka.model.events.Event1.SCHEMA$);
     }
     
     /** Creates a Builder by copying an existing Builder */
-    private Builder(com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder other) {
+    private Builder(com.mddarr.avromoviekafka.model.events.Event1.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
@@ -120,8 +120,8 @@ public class Event1 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Creates a Builder by copying an existing Event1 instance */
-    private Builder(com.mddarr.avromoviekafka.model.events.Event1.Event1 other) {
-            super(com.mddarr.avromoviekafka.model.events.Event1.Event1.SCHEMA$);
+    private Builder(com.mddarr.avromoviekafka.model.events.Event1 other) {
+            super(com.mddarr.avromoviekafka.model.events.Event1.SCHEMA$);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
         fieldSetFlags()[0] = true;
@@ -138,7 +138,7 @@ public class Event1 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Sets the value of the 'name' field */
-    public com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder setName(java.lang.String value) {
+    public com.mddarr.avromoviekafka.model.events.Event1.Builder setName(java.lang.String value) {
       validate(fields()[0], value);
       this.name = value;
       fieldSetFlags()[0] = true;
@@ -151,7 +151,7 @@ public class Event1 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Clears the value of the 'name' field */
-    public com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder clearName() {
+    public com.mddarr.avromoviekafka.model.events.Event1.Builder clearName() {
       name = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -163,7 +163,7 @@ public class Event1 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Sets the value of the 'value' field */
-    public com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder setValue(java.lang.String value) {
+    public com.mddarr.avromoviekafka.model.events.Event1.Builder setValue(java.lang.String value) {
       validate(fields()[1], value);
       this.value = value;
       fieldSetFlags()[1] = true;
@@ -176,7 +176,7 @@ public class Event1 extends org.apache.avro.specific.SpecificRecordBase implemen
     }
     
     /** Clears the value of the 'value' field */
-    public com.mddarr.avromoviekafka.model.events.Event1.Event1.Builder clearValue() {
+    public com.mddarr.avromoviekafka.model.events.Event1.Builder clearValue() {
       value = null;
       fieldSetFlags()[1] = false;
       return this;

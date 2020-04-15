@@ -1,14 +1,10 @@
 package com.mddarr.avromoviekafka.mock;
 
-import com.mddarr.avromoviekafka.model.events.Event1.Event1;
-import com.mddarr.avromoviekafka.model.events.Event2.Event2;
 import io.confluent.kafka.schemaregistry.client.MockSchemaRegistryClient;
 import io.confluent.kafka.schemaregistry.client.SchemaRegistryClient;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;
-import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.avro.Schema;
 import com.mddarr.avromoviekafka.Constants;
-import java.util.Map;
 
 public class CustomAvroDeserializer extends KafkaAvroDeserializer {
     @Override

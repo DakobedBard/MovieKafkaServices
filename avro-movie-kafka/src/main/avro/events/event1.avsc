@@ -1,7 +1,7 @@
 {
   "type" : "record",
   "name" : "Event1",
-  "namespace": "com.mddarr.avromoviekafka.model.events.Event1" ,
+  "namespace": "com.mddarr.avromoviekafka.model.events" ,
   "doc" : "Schema for hr.ivlahek.showcase.event.dto.Event1",
   "fields" : [ {
     "name" : "name",
