@@ -36,11 +36,7 @@ This helps funnel consistency, validation and other ‘write path’ concerns th
 Assigning responsibility for event propagation is important because these aren’t just ephemeral events, or transient chit-chat. They represent shared facts, the data-on-the-outside. As such, services need to take responsibility for curating these shared datasets over time: fixing errors, handling situations where schemas change etc.
 
 
-
-
-  If you’ve not considered the distinction between these three before, it’s well worth doing so.
-
-
+ If you’ve not considered the distinction between these three before, it’s well worth doing so.
 
     Decoupling: Break long chains of blocking commands. Decompose synchronous workflows. Brokers decouple services so it’s easier to plug new ones in, or change those that are there.
     Offline/Async flows: When the user clicks a button many things happen. Some synchronously, some asynchronously. Design for the latter and the former falls out for free.

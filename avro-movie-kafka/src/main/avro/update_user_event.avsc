@@ -1,0 +1,8 @@
+{
+ "type": "record",
+ "name": "com.mddarr.avromoviekafka.model.UserUpdateEvent",
+ "fields": [
+    { "name": "name","type": "string", "avro.java.string": "String" },
+    { "name": "eventName","type": "string", "avro.java.string": "String"}
+ ]
+}

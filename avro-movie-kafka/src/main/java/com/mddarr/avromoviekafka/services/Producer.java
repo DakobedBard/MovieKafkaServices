@@ -1,5 +1,6 @@
-package com.mddarr.avromoviekafka;
+package com.mddarr.avromoviekafka.services;
 
+import com.mddarr.avromoviekafka.User;
 import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,7 +21,7 @@ public class Producer {
     }
 
     public void sendMessage(User user) {
-        this.kafkaTemplate.send(TOPIC, user.getName(), user);
+        this.kafkaTemplate.send(TOPIC, user.getUsername(), user);
         log.info(String.format("Produced user -> %s", user));
     }
 

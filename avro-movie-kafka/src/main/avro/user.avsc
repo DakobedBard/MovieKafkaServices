@@ -1,8 +1,8 @@
 {
  "type": "record",
- "name": "com.mddarr.avromoviekafka.User",
+ "name": "com.mddarr.avromoviekafka.model.User",
  "fields": [
-    { "name": "name","type": "string", "avro.java.string": "String" },
+    { "name": "username","type": "string", "avro.java.string": "String" },
     { "name": "age", "type": "int" }
  ]
 }
