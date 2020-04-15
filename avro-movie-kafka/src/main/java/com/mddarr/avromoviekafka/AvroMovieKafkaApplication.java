@@ -9,13 +9,13 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class AvroMovieKafkaApplication {
 
-	@Value("${topic.name}")
+	@Value("${topic_name}")
 	private String topicName;
 
-	@Value("${topic.partitions-num}")
+	@Value("${topic_partitions_num}")
 	private Integer partitions;
 
-	@Value("${topic.replication-factor}")
+	@Value("${topic_partions_replication_factor}")
 	private short replicationFactor;
 
 	public static void main(String[] args) {

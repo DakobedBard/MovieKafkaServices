@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 @CommonsLog(topic = "Consumer Logger")
-public class Consumer {
-    @Value("${topic.name}")
-    private String topicName;
-
-    @KafkaListener(topics= "users", groupId = "group_id")
-    public void consume(ConsumerRecord<String, User> record){
-        log.info(String.format("Consume message -> %s", record.value()));
-    }
+public class Consumer1 {
+//    @Value("${topic.name}")
+//    private String topicName;
+//
+//    @KafkaListener(topics= "users", groupId = "group_id")
+//    public void consume(ConsumerRecord<String, User> record){
+//        log.info(String.format("Consume message -> %s", record.value()));
+//    }
 
 }

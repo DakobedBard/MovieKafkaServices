@@ -1,5 +1,7 @@
 package com.mddarr.avromoviekafka.mock;
 
+import com.mddarr.avromoviekafka.model.events.Event1;
+import com.mddarr.avromoviekafka.model.events.Event2;
 import io.confluent.kafka.schemaregistry.client.MockSchemaRegistryClient;
 import io.confluent.kafka.schemaregistry.client.SchemaRegistryClient;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;

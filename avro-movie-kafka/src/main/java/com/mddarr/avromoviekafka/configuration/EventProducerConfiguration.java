@@ -17,7 +17,7 @@ import java.util.Map;
 
 @Configuration
 public class EventProducerConfiguration {
-    @Value("${kafka.bootstrap-servers}")
+    @Value("${bootstrap-servers}")
     private String bootstrapServers;
 
     @Bean
