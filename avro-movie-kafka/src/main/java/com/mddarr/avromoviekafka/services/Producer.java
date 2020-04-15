@@ -1,6 +1,6 @@
 package com.mddarr.avromoviekafka.services;
 
-import com.mddarr.avromoviekafka.User;
+import com.mddarr.avromoviekafka.model.User;
 import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
