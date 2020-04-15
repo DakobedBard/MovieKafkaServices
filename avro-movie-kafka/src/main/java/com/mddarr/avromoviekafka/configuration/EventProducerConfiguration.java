@@ -3,6 +3,7 @@ package com.mddarr.avromoviekafka.configuration;
 import com.mddarr.avromoviekafka.model.events.Event1;
 import com.mddarr.avromoviekafka.model.events.Event2;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;
+import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,7 +26,8 @@ public class EventProducerConfiguration {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
+        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
+        configProps.put("schema.registry.url", "http://localhost:8081");
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
@@ -39,7 +41,8 @@ public class EventProducerConfiguration {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
+        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
+        configProps.put("schema.registry.url", "http://localhost:8081");
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
@@ -47,6 +50,5 @@ public class EventProducerConfiguration {
     public KafkaTemplate<String, Event2> event2KafkaTemplate() {
         return new KafkaTemplate<>(event2ProducerFactory());
     }
-
 
 }
