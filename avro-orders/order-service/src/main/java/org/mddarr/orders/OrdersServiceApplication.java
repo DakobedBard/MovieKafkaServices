@@ -10,13 +10,13 @@ import javax.annotation.PostConstruct;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "org.mddarr.orders")
-public class ShowcaseApp {
+public class OrdersServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ShowcaseApp.class, args);
+        SpringApplication.run(OrdersServiceApplication.class, args);
     }
 
-    private static final Logger logger = LoggerFactory.getLogger(ShowcaseApp.class);
+    private static final Logger logger = LoggerFactory.getLogger(OrdersServiceApplication.class);
 
     @PostConstruct
     public void postInit() {

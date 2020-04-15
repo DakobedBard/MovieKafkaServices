@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>org.mddarr</groupId>
-        <artifactId>kafka-avro-without-registry</artifactId>
+        <artifactId>avro-orders</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
